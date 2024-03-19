@@ -92,12 +92,13 @@
                 @include('includes.partials.messages')
 
                 <div class="title m-b-md">
-                    <example-component></example-component>
+                   <p>GESTION DES COURRIERS</p>
                 </div><!--title-->
+                <P class="">Ministère de la Femme, de le Famille, de l'Equité et du Développement Communautaire</P>
 
                 <div class="links">
-                    <a href="http://laravel-boilerplate.com" target="_blank"><i class="fa fa-book"></i> @lang('Docs')</a>
-                    <a href="https://github.com/rappasoft/laravel-boilerplate" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    {{-- <a href="http://laravel-boilerplate.com" target="_blank"><i class="fa fa-book"></i> @lang('Docs')</a> --}}
+                    {{-- <a href="https://github.com/rappasoft/laravel-boilerplate" target="_blank"><i class="fab fa-github"></i> GitHub</a> --}}
                 </div><!--links-->
             </div><!--content-->
         </div><!--app-->
