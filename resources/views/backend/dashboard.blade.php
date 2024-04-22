@@ -23,9 +23,9 @@
                         <td>{{ $courrier->expediteur }}</td>
                         <td>{{ $courrier->destinataire }}</td>
                         @if($courrier->type == 0)
-                        <td>Depart</td>
+                            <td>Depart</td>
                         @else
-                        <td>Arrivé</td> 
+                            <td>Arrivé</td> 
                         @endif
                     </tr>
                     @endforeach

@@ -12,7 +12,8 @@ class HomeController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')
+            ->except('index');
     }
 
 
@@ -21,6 +22,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+        return view('frontend.index');
     }
 }

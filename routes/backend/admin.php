@@ -12,8 +12,15 @@ Route::get('dashboard', [DashboardController::class, 'index'])
         $trail->push(__('Home'), route('admin.dashboard'));
     });
 
+    // Vue du formulaire d'ajout de courrier
 Route::get('/courriers/add', [CourrierController::class, 'add'])
     ->name('courrier.add');
 
+    // Soumettre le formulaire d'ajout de courrier
 Route::post('/courriers/add', [CourrierController::class, 'store'])
     ->name('courrier.store');
+
+// 
+Route::get('/courriers/{courrier]', [CourrierController::class, 'show'])
+    ->name('courrier.show');
+
