@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Courrier;
+
 /**
  * Class DashboardController.
  */
@@ -12,6 +14,8 @@ class DashboardController
      */
     public function index()
     {
-        return view('backend.dashboard');
+        $courriers = Courrier::all();
+
+        return view('backend.dashboard', compact('courriers'));
     }
 }
