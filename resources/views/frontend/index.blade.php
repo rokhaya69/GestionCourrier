@@ -11,7 +11,7 @@
         @stack('before-styles')
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="{{ mix('css/frontend.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/frontend.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -93,6 +93,7 @@
 
                 <div class="title m-b-md">
                    <p>GESTION DES COURRIERS</p>
+                   <small> AMINA LA STAR</small>
                 </div><!--title-->
                 <P class="">Ministère de la Femme, de le Famille, de l'Equité et du Développement Communautaire</P>
 
@@ -104,9 +105,9 @@
         </div><!--app-->
 
         @stack('before-scripts')
-        <script src="{{ mix('js/manifest.js') }}"></script>
-        <script src="{{ mix('js/vendor.js') }}"></script>
-        <script src="{{ mix('js/frontend.js') }}"></script>
+        <script src="{{ asset('js/manifest.js') }}"></script>
+        <script src="{{ asset('js/vendor.js') }}"></script>
+        <script src="{{ asset('js/frontend.js') }}"></script>
         @stack('after-scripts')
     </body>
 </html>

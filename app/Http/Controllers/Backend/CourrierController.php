@@ -17,20 +17,17 @@ class CourrierController extends Controller
     public function store(Request $request)
     {
 
-        // dd($request->file('fichier'), (Carbon::now())->format('F') );
-
-        $path = $request->file('fichier')->store('courriers/' . (new Carbon)->year . '/' . (Carbon::now())->format('F') );
-
-        // dd($path);
+        $path = $request->file('fichier')->store('public/courriers/' . (new Carbon)->year . '/' . (Carbon::now())->format('F') );
+         $pathdb = ltrim($path, "public");
 
         Courrier::create([
             'numero' => $request->numero,
             'expediteur' => $request->expediteur,
             'destinataire' => $request->destinataire,
             'type' => $request->type,
-            'file' => $path,
+            'file' => $pathdb,
         ]);
 
-        return redirect()->route('admin.dashboard')->with(['success' => 'Votre courrier a ete bien enregistrer']);
+        return redirect()->route('admin.dashboard')->with(['flash_success' => 'Votre courrier a ete bien enregistrer']);
     }
 }
