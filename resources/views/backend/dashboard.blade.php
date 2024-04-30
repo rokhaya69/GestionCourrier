@@ -15,6 +15,7 @@
                     <td>Expediteur</td>
                     <td>Destinataire</td>
                     <td>Type</td>
+                    <td>Actions</td>
                 </thead>
                 <tbody>
                     @foreach($courriers as $courrier)
@@ -27,6 +28,9 @@
                         @else
                             <td>Arrivé</td> 
                         @endif
+                        <td>
+                            <a href="{{ asset("storage" . $courrier->file) }}" class="btn btn-primary">ouvrir fichier</a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
